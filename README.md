@@ -94,9 +94,12 @@ convert_phased('yri')
 <li> Run GWAsimulator: </li>
 </ol>
 
-The maximum number of SNPs in the phased files can exceeds ```100000 SNPs``` for some chromosomes which is the default setting of GWAsimulator software, so first let's increase this threshold in ```GWAsimulator.cpp``` in the following line:
+The maximum number of SNPs in the phased files can exceeds ```100000 SNPs``` for some chromosomes which is the default setting of GWAsimulator software. To do so, one must:
+1. Modify the source file ```GWAsimulator.cpp``` in the following line:
 
 ```#define MAXSNP 1000000   // maximum number of SNPs per chromosome```
+
+2. Recompile `GWAsimulator.cpp` by running `./build` in the directory where `GWAsimulator.cpp` is located (see the pdf doc file shipped with GWAsimulator for details). 
 
 #### CEU population:
 	
